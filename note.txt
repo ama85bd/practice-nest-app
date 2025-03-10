@@ -2,3 +2,4 @@ nest new project-name
 nest g module songs
 nest g controller songs
 nest g service songs
+npm install class-validator class-transformer 
