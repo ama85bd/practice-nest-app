@@ -9,6 +9,10 @@ export class SongsService {
     return this.songs;
   }
   findAll() {
-    return this.songs;
+    try {
+      return this.songs;
+    } catch (error) {
+      throw new Error('Error in DB with fatching data!');
+    }
   }
 }
