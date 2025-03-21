@@ -4,3 +4,4 @@ nest g controller songs
 nest g service songs
 npm install class-validator class-transformer 
 nest g mi common/middleware/logger --no-spec --no-flat
+npm i @nestjs/mongoose mongoose

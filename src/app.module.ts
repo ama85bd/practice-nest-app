@@ -10,9 +10,15 @@ import { SongsModule } from './songs/songs.module';
 import { LoggerMiddleware } from './common/middleware/logger/logger.middleware';
 import { SongsController } from './songs/songs.controller';
 import { DevConfigService } from './common/providers/DevConfigService';
+import { MongooseModule } from '@nestjs/mongoose';
+import { UsersModule } from './users/users.module';
 
 @Module({
-  imports: [SongsModule],
+  imports: [
+    SongsModule,
+    MongooseModule.forRoot('mongodb://127.0.0.1/nestjs_tutorial'),
+    UsersModule,
+  ],
   controllers: [AppController],
   providers: [
     AppService,
