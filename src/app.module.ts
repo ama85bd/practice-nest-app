@@ -12,12 +12,14 @@ import { SongsController } from './songs/songs.controller';
 import { DevConfigService } from './common/providers/DevConfigService';
 import { MongooseModule } from '@nestjs/mongoose';
 import { UsersModule } from './users/users.module';
+import { PostsModule } from './posts/posts.module';
 
 @Module({
   imports: [
     SongsModule,
     MongooseModule.forRoot('mongodb://127.0.0.1/nestjs_tutorial'),
     UsersModule,
+    PostsModule,
   ],
   controllers: [AppController],
   providers: [
